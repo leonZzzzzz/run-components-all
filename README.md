@@ -14,9 +14,30 @@ Vue.use(RunAll);
 
 **例：**
 
-map 的使用
-直接在 template 标签内使用组件
+tableColumn 表格组件的使用
+直接在组件的 template 标签内使用
 
-<tableColumn></tableColumn>
+**----------------组件 1 start--------------**
+<tableColumn :columnOptions="columnOptions" :tableData="tableData"></tableColumn>
 
-其中需要传入一些参数，详情以后补充，暂时可以先看源码
+传参：
+columnOptions:[
+{
+label:'名称',<!-- 表头内容 -->
+prop:'name',<!-- 参数名称 -->
+type:'text',<!-- 参数名称 -->
+align:'center',<!-- 是否居中 -->
+formatter:row => {<!-- 如果项目中已配置 jsx，可以直接在 formatter 中写 html -->
+return row
+}
+}
+];
+tableData:[],<!-- 接口传的列表数组 -->
+**----------------组件 1 end---------------**
+
+**----------------组件 2 start--------------**
+<NoticTip :test="test"></NoticTip>
+
+传参：
+test:'我是测试内容',<!-- 接口传的列表数组 -->
+**----------------组件 2 end---------------**

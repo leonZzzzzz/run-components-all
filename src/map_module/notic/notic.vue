@@ -1,24 +1,30 @@
 <template>
   <div class="common-table">
-    <div class="one">run-componenets-all</div>
+    <div class="one">{{ test }}</div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'NoticTip',
+  name: "NoticTip",
+  props: {
+    test: {
+      type: String,
+      default: "",
+    },
+  },
   data() {
     return {};
   },
-  methods: {}
+  methods: {},
 };
 </script>
 
 <style lang="scss" scoped>
-.one{
-  color:#000;
+.one {
+  color: #000;
 }
-.one:hover{
-  color:rgb(241, 21, 21);
+.one:hover {
+  color: rgb(241, 21, 21);
 }
 </style>
