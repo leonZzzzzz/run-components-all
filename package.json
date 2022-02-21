@@ -1,6 +1,6 @@
 {
   "name": "run-components-all",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "nothing",
   "author": "tanwen",
   "main": "lib/static/js/app.js",
