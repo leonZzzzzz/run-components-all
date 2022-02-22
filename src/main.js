@@ -27,6 +27,7 @@ import ScrollTop from "./map_module/scrollTop/index";
 var components = [TableColumn, NoticTip, ScrollTop];
 const install = function (Vue) {
   components.map(function (component) {
+    console.log("component", component);
     Vue.component(component.name, component);
   });
 };
